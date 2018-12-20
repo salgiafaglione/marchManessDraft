@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import logo from '../images/logo.svg';
+import '../styles/App.css';
+import BaseComponent from './BaseComponent';
+import DraftBar from './draftBar/DraftBar';
 
-class App extends Component {
+class App extends BaseComponent {
   render() {
     return (
       <div className="App">
+        <DraftBar />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
