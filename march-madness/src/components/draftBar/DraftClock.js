@@ -2,6 +2,8 @@ import React from 'react';
 import ReactCountdownClock from 'react-countdown-clock';
 import BaseComponent from "../BaseComponent";
 
+import '../../styles/draftClock.css';
+
 export default class DraftClock extends BaseComponent {
     constructor() {
         super();
@@ -22,7 +24,7 @@ export default class DraftClock extends BaseComponent {
 
     render() {
         return (
-            <div>
+            <div id="draft-clock">
                 <ReactCountdownClock seconds={this.state.seconds}
                     color="#000"
                     alpha={0.9}

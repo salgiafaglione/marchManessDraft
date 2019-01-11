@@ -1,6 +1,8 @@
 import React from 'react';
+import { Row } from 'reactstrap'
 import BaseComponent from "../BaseComponent";
 import DraftClock from './DraftClock';
+import DraftOrder from './DraftOrder';
 
 export default class DraftBar extends BaseComponent {
     constructor() {
@@ -18,13 +20,13 @@ export default class DraftBar extends BaseComponent {
 
     render() {
         return (
-            <div>
+            <Row>
                 <DraftClock
                     pickNumber={this.state.pickNumber}
                     updatePickNumber={this.updatePickNumber}
                 />
-                
-            </div>
+                <DraftOrder />
+            </Row>
         );
     }
 }
