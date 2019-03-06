@@ -12,16 +12,8 @@ export default class TeamQueue extends BaseComponent {
             columnDefs: [
                 {
                     headerName: "School",
-                    field: "ShortDisplayName",
+                    field: "SchoolName",
                     rowDrag: true
-                }
-            ],
-            rowData: [
-                {
-                    "ShortDisplayName": "UNC"
-                },
-                {
-                    "ShortDisplayName": "VIR"
                 }
             ]
         };
@@ -32,7 +24,7 @@ export default class TeamQueue extends BaseComponent {
             <div id="team-queue">
                 <DefaultGrid
                     columnDefs={this.state.columnDefs}
-                    rowData={this.state.rowData}
+                    rowData={this.props.rowData}
                 />
             </div>
         );
